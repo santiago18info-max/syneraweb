@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Santiago Cabrera · Desarrollador de software | Synera</title>
+  <meta name="description" content="Santiago Cabrera, desarrollador de software y fundador de Synera. Sistemas de gestión, aplicaciones y páginas web a medida desde Montevideo, Uruguay.">
+  <meta name="theme-color" content="#FAFAF9">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Santiago Cabrera · Synera">
+  <meta property="og:description" content="Sistemas de gestión, aplicaciones y páginas web a medida desde Montevideo.">
+  <meta property="og:image" content="img/santiago.png">
+  <link rel="icon" type="image/png" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    try { if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark"); } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ========== NAVEGACIÓN ========== -->
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#inicio" class="brand" aria-label="Synera, ir al inicio">
+        <img src="img/logo.png" alt="Synera" class="brand-logo">
+      </a>
+      <nav aria-label="Principal">
+        <ul class="menu" id="menu">
+          <li><a href="#trabajo">Trabajo</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#sobre-mi">Sobre mí</a></li>
+          <li><a href="#planes">Planes</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeToggle" aria-label="Cambiar a modo oscuro">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+        </button>
+        <a href="#contacto" class="btn btn-primary btn-sm nav-cta">Hablemos</a>
+        <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="inicio">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="status reveal"><span class="dot"></span>Disponible para nuevos proyectos</p>
+          <h1 class="hero-title reveal">Santiago Cabrera</h1>
+          <p class="hero-role reveal">Desarrollador de software · Fundador de Synera</p>
+          <p class="hero-text reveal">Diseño y construyo sistemas de gestión, aplicaciones y sitios web para empresas y comercios de Uruguay. Del análisis a la puesta en producción, con documentación y soporte.</p>
+          <div class="hero-actions reveal">
+            <a href="#trabajo" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-ghost">Contactame</a>
+          </div>
+        </div>
+        <figure class="hero-visual reveal">
+          <img src="img/santiago.png" alt="Santiago Cabrera" class="portrait" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+        </figure>
+      </div>
+
+      <div class="container">
+        <dl class="facts reveal">
+          <div><dt>Base</dt><dd>Montevideo, Uruguay</dd></div>
+          <div><dt>Formación</dt><dd>Tecnólogo en Informática</dd></div>
+          <div><dt>Actualmente</dt><dd>Desarrollador de aplicaciones · UTU</dd></div>
+          <div><dt>Especialidad</dt><dd>Backend y sistemas de gestión</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ========== TRABAJO ==========
+         IMÁGENES en img/proyectos/ con el nombre de cada <img src>.
+         - Sistemas y mobile: logo o captura, se ve entero y centrado (fondo = --media-bg).
+         - Webs: captura horizontal, ideal 1600×1000 px.
+         Si una imagen no existe, se muestra el nombre del proyecto. -->
+    <section class="section" id="trabajo">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label">01 — Trabajo</p>
+          <h2 class="section-title">Proyectos seleccionados</h2>
+          <p class="section-lead">Productos propios y proyectos en los que lideré el diseño técnico, desde la base de datos hasta la interfaz.</p>
+        </header>
+
+        <!-- ===== SISTEMAS DE GESTIÓN ===== -->
+        <div class="category" id="sistemas">
+          <div class="cat-head reveal">
+            <h3 class="cat-title">Sistemas de gestión</h3>
+            <p class="cat-desc">Plataformas a medida para ordenar la operación de empresas e instituciones.</p>
+          </div>
+          <div class="projects projects-2">
+            <article class="project reveal">
+              <figure class="project-media fit-contain" style="--media-bg:#FFFFFF">
+                <img src="img/proyectos/siga.jpg" alt="Logo de SIGA" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">SIGA</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Producto propio</p>
+                <h4>SIGA</h4>
+                <p>Sistema Integral de Gestión de Activos para que instituciones educativas registren, asignen y den seguimiento a su equipamiento. Diseñé la arquitectura, la base de datos y la documentación formal.</p>
+                <ul class="stack"><li>Laravel 11</li><li>PHP 8.2</li><li>MySQL</li><li>.NET 8</li></ul>
+              </div>
+            </article>
+            <article class="project reveal">
+              <figure class="project-media fit-contain" style="--media-bg:#FFFFFF">
+                <img src="img/proyectos/Nodos.png" alt="Logo de Nodos" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">Nodos</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Herramienta propia</p>
+                <h4>Nodos</h4>
+                <p>Plataforma de CI/CD para desplegar mis sistemas de forma automatizada en los entornos de desarrollo, test y producción, con un flujo de publicación controlado y repetible.</p>
+                <ul class="stack"><li>CI/CD</li><li>GitHub Actions</li><li>Docker</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ===== APLICACIONES MOBILE ===== -->
+        <div class="category" id="mobile">
+          <div class="cat-head reveal">
+            <h3 class="cat-title">Aplicaciones mobile</h3>
+            <p class="cat-desc">Apps para iOS y Android pensadas para usarse todos los días.</p>
+          </div>
+          <div class="projects projects-2">
+            <article class="project reveal">
+              <figure class="project-media fit-contain" style="--media-bg:#FFFFFF">
+                <img src="img/proyectos/voces.png" alt="Logo de Voces" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">Voces</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Sin fines de lucro</p>
+                <h4>Voces</h4>
+                <p>Aplicación mobile para la Facultad de Medicina que permite reportar situaciones de violencia de forma simple y segura.</p>
+                <ul class="stack"><li>Java</li><li>Spring Boot</li><li>MongoDB</li></ul>
+              </div>
+            </article>
+            <article class="project reveal">
+              <figure class="project-media fit-contain" style="--media-bg:#F8F3EA">
+                <img src="img/proyectos/juntada.jpg" alt="Logo de Juntada" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">Juntada</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">En desarrollo · Lanzamiento dic. 2026</p>
+                <h4>Juntada</h4>
+                <p>App para conocer gente nueva a través de actividades en común: te sumás a planes, deportes o salidas y conectás con personas que comparten tus intereses.</p>
+                <ul class="stack"><li>React Native</li><li>TypeScript</li></ul>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <!-- ===== PÁGINAS WEB ===== -->
+        <div class="category" id="web">
+          <div class="cat-head reveal">
+            <h3 class="cat-title">Páginas web</h3>
+            <p class="cat-desc">Tres demos, una por plan y cada una de un rubro distinto. Son genéricas: se adaptan y se mejoran para cada comercio, con sus fotos, sus productos y su estilo.</p>
+          </div>
+          <div class="projects projects-3">
+            <article class="project reveal">
+              <figure class="project-media">
+                <img src="img/proyectos/parrilla.png" alt="Captura de la demo Fuego Lento" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">Fuego Lento</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Plan Inicial · Demo</p>
+                <h4>Fuego Lento · Parrillada</h4>
+                <p>Carta, galería, horarios, mapa y acceso directo a WhatsApp y redes para reservas y pedidos.</p>
+                <a class="project-link" href="https://fuegolento-demo.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="project reveal">
+              <figure class="project-media">
+                <img src="img/proyectos/ropa.png" alt="Captura de la demo NUDO" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">NUDO</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Plan Profesional · Demo</p>
+                <h4>NUDO · Indumentaria</h4>
+                <p>Catálogo con filtros, colores y talles, lookbook y consulta por WhatsApp desde cada prenda. En español e inglés.</p>
+                <a class="project-link" href="https://nudo-demo.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+              </div>
+            </article>
+            <article class="project reveal">
+              <figure class="project-media">
+                <img src="img/proyectos/Almibar.png" alt="Captura de la demo Almíbar" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                <span class="project-ph" aria-hidden="true">Almíbar</span>
+              </figure>
+              <div class="project-body">
+                <p class="project-meta">Plan Completo · Demo</p>
+                <h4>Almíbar · Pastelería</h4>
+                <p>Catálogo, pedidos directos por producto y panel propio para cargar productos, precios, fotos y seguir pedidos.</p>
+                <div class="project-links">
+                  <a class="project-link" href="https://almibar-demo.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                  <a class="project-link" href="https://almibar-demo.vercel.app/panel.html" target="_blank" rel="noopener">Ver panel <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="project-hint">Panel: usuario y clave <code>demo</code></p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section class="section section-alt" id="servicios">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label">02 — Servicios</p>
+          <h2 class="section-title">Qué hago</h2>
+          <p class="section-lead">A través de Synera ofrezco soluciones completas, con trato directo y alcance claro desde el primer día.</p>
+        </header>
+        <div class="services">
+          <div class="service reveal">
+            <span class="service-num">01</span>
+            <h3>Sistemas de gestión</h3>
+            <p>Stock, clientes, turnos o activos. Software a medida que ordena la operación y crece con el negocio.</p>
+          </div>
+          <div class="service reveal">
+            <span class="service-num">02</span>
+            <h3>Aplicaciones web</h3>
+            <p>Portales, paneles internos y APIs. Desde el relevamiento hasta el despliegue y el mantenimiento.</p>
+          </div>
+          <div class="service reveal">
+            <span class="service-num">03</span>
+            <h3>Páginas web</h3>
+            <p>Sitios rápidos, adaptados al celular y optimizados para aparecer en Google.</p>
+          </div>
+          <div class="service reveal">
+            <span class="service-num">04</span>
+            <h3>Automatización e IA</h3>
+            <p>Asistentes y procesos automáticos que ahorran horas de trabajo manual todas las semanas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SOBRE MÍ ========== -->
+    <section class="section" id="sobre-mi">
+      <div class="container about">
+        <div class="about-copy reveal">
+          <p class="label">03 — Sobre mí</p>
+          <h2 class="section-title">Software pensado para problemas concretos.</h2>
+          <p>Soy Tecnólogo en Informática y trabajo como desarrollador de aplicaciones en el Departamento de Informática de UTU (Oficinas Centrales), de forma presencial. Ahí construyo y mantengo sistemas que se usan todos los días a nivel institucional.</p>
+          <p>En paralelo fundé Synera para que empresas y comercios de Uruguay accedan a software de calidad: con análisis serio, código mantenible, documentación y una persona responsable de principio a fin.</p>
+          <div class="about-actions">
+            <!-- Subí tu CV como cv-santiago-cabrera.pdf (junto a index.html) -->
+            <a href="SANTIAGO CABRERA CV.pdf" class="btn btn-ghost" download>Descargar CV</a>
+            <!-- Poné los links reales de tus perfiles -->
+            <a href="https://www.linkedin.com/in/santiago-cabrera-734644365/?isSelfProfile=true" class="text-link">LinkedIn ↗</a>
+            <a href="https://github.com/santiago18info-max" class="text-link" target="_blank" rel="noopener">GitHub ↗</a>
+          </div>
+        </div>
+
+        <div class="stack-panel reveal">
+          <div class="stack-group">
+            <h3>Backend</h3>
+            <p>Java · Spring Boot · PHP · Laravel · Python · Django · Node.js</p>
+          </div>
+          <div class="stack-group">
+            <h3>Datos</h3>
+            <p>PostgreSQL · MySQL · MongoDB</p>
+          </div>
+          <div class="stack-group">
+            <h3>Plataformas y herramientas</h3>
+            <p>GeneXus · Docker · Git · GitHub Actions · JavaScript</p>
+          </div>
+          <div class="stack-group">
+            <h3>Prácticas</h3>
+            <p>Arquitectura en capas · APIs REST · Documentación IEEE · Liderazgo técnico</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROCESO ========== -->
+    <section class="section section-alt" id="proceso">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label">04 — Proceso</p>
+          <h2 class="section-title">Un camino claro, sin sorpresas.</h2>
+        </header>
+        <ol class="steps">
+          <li class="reveal"><span class="step-num">01</span><h3>Descubrir</h3><p>Entiendo tu negocio, tus clientes y el problema a resolver.</p></li>
+          <li class="reveal"><span class="step-num">02</span><h3>Definir</h3><p>Acordamos alcance, plazos y precio por escrito.</p></li>
+          <li class="reveal"><span class="step-num">03</span><h3>Demo</h3><p>Te muestro una primera versión sin costo antes de contratar.</p></li>
+          <li class="reveal"><span class="step-num">04</span><h3>Desarrollar</h3><p>Construyo la solución con entregas parciales y ajustes.</p></li>
+          <li class="reveal"><span class="step-num">05</span><h3>Entregar</h3><p>Publicamos y te acompaño con soporte y mejoras.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== PLANES ========== -->
+    <section class="section" id="planes">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="label">05 — Planes web para comercios</p>
+          <h2 class="section-title">Tu negocio en internet, sin complicaciones.</h2>
+          <p class="section-lead">Todos los planes incluyen presencia, crecimiento y ventas, galería de imágenes profesional, hosting, seguridad y soporte. Ves tu página antes de pagar.</p>
+        </header>
+        <div class="plans">
+          <article class="plan reveal">
+            <h3>Inicial</h3>
+            <p class="plan-tag">Para empezar a vender online.</p>
+            <p class="plan-price"><small>$U</small> 6.900</p>
+            <p class="plan-monthly">pago inicial + $U 490 / mes</p>
+            <ul>
+              <li>Tu página lista en 5 días</li>
+              <li>Galería de imágenes profesional</li>
+              <li>Ficha de Google Maps optimizada</li>
+              <li>Dominio propio incluido</li>
+              <li>Textos y fotos hechos por nosotros</li>
+              <li>Acceso directo a tu WhatsApp y redes</li>
+              <li>3 cambios por mes</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/59897226657?text=Hola%20Santiago%2C%20me%20interesa%20el%20plan%20Inicial" target="_blank" rel="noopener">Consultar</a>
+          </article>
+          <article class="plan plan-featured reveal">
+            <div class="plan-head"><h3>Profesional</h3><span class="plan-badge">Más elegido</span></div>
+            <p class="plan-tag">Para vender más.</p>
+            <p class="plan-price"><small>$U</small> 12.900</p>
+            <p class="plan-monthly">pago inicial + $U 790 / mes</p>
+            <ul>
+              <li>Todo lo del plan Inicial</li>
+              <li>Página también en inglés</li>
+              <li>Posicionamiento en búsquedas de tu barrio</li>
+              <li>QR de mostrador para sumar reseñas</li>
+              <li>Reporte mensual de visitas</li>
+              <li>Catálogo de hasta 30 productos con precios</li>
+              <li>6 cambios por mes</li>
+            </ul>
+            <a class="btn btn-primary btn-block" href="https://wa.me/59897226657?text=Hola%20Santiago%2C%20me%20interesa%20el%20plan%20Profesional" target="_blank" rel="noopener">Consultar</a>
+          </article>
+          <article class="plan reveal">
+            <h3>Completo</h3>
+            <p class="plan-tag">Para vender todos los días.</p>
+            <p class="plan-price"><small>$U</small> 19.900</p>
+            <p class="plan-monthly">pago inicial + $U 1.290 / mes</p>
+            <ul>
+              <li>Todo lo del plan Profesional</li>
+              <li>Publicaciones mensuales en Google</li>
+              <li>2 diseños por mes para Instagram</li>
+              <li>Catálogo de hasta 100 productos</li>
+              <li>Pedidos directos desde cada producto</li>
+              <li>Asistente con IA que responde 24/7</li>
+              <li>Panel para cambiar tus precios</li>
+              <li>Cambios ilimitados</li>
+            </ul>
+            <a class="btn btn-ghost btn-block" href="https://wa.me/59897226657?text=Hola%20Santiago%2C%20me%20interesa%20el%20plan%20Completo" target="_blank" rel="noopener">Consultar</a>
+          </article>
+        </div>
+        <p class="plans-note reveal">Pagá el inicial en 2 cuotas. ¿Necesitás una tienda online, un sistema de gestión o una app? <a href="#contacto">Lo cotizamos a medida.</a></p>
+      </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section class="section section-alt" id="contacto">
+      <div class="container contact">
+        <div class="contact-info reveal">
+          <p class="label">06 — Contacto</p>
+          <h2 class="section-title">Hagamos algo juntos.</h2>
+          <p class="section-lead">Contame qué necesitás. Respondo en el día hábil, con una propuesta concreta.</p>
+          <dl class="contact-list">
+            <div><dt>WhatsApp</dt><dd><a href="https://wa.me/59897226657" target="_blank" rel="noopener">097 226 657</a></dd></div>
+            <div><dt>Email</dt><dd><a href="mailto:synerasa.soporte@gmail.com">synerasa.soporte@gmail.com</a></dd></div>
+            <div><dt>Ubicación</dt><dd>Montevideo, Uruguay</dd></div>
+          </dl>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input id="nombre" name="nombre" autocomplete="name" required>
+          </label>
+          <label class="field">
+            <span>Empresa o negocio</span>
+            <input id="negocio" name="negocio" autocomplete="organization" required>
+          </label>
+          <label class="field field-full">
+            <span>Tipo de proyecto</span>
+            <select id="tipo" name="tipo">
+              <option value="" selected>Seleccioná una opción</option>
+              <option>Sistema de gestión a medida</option>
+              <option>Aplicación web</option>
+              <option>Aplicación mobile</option>
+              <option>Automatización o IA</option>
+              <option>Página web (plan Inicial)</option>
+              <option>Página web (plan Profesional)</option>
+              <option>Página web (plan Completo)</option>
+              <option>Tienda online</option>
+              <option>Propuesta laboral</option>
+              <option>Otro</option>
+            </select>
+          </label>
+          <label class="field field-full">
+            <span>Mensaje</span>
+            <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contame brevemente sobre tu proyecto"></textarea>
+          </label>
+          <div class="form-actions field-full">
+            <button type="submit" class="btn btn-primary">Enviar por WhatsApp</button>
+            <button type="button" class="btn btn-ghost" id="sendEmail">Enviar por email</button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="img/logo.png" alt="Synera" class="footer-logo">
+        <p>Software a medida desde Montevideo.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#trabajo">Trabajo</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#planes">Planes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <ul class="footer-links">
+        <li><a href="#">LinkedIn</a></li>
+        <li><a href="https://github.com/santiago18info-max" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+    <div class="container footer-bottom">
+      <small>© <span id="year">2026</span> Santiago Cabrera · Synera</small>
+      <small>Transformar es avanzar</small>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/59897226657?text=Hola%20Santiago%2C%20quiero%20hacer%20una%20consulta" target="_blank" rel="noopener" aria-label="Escribime por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.7 11.7 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2l-.4-.3Z"/></svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
