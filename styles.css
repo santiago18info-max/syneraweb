@@ -402,4 +402,55 @@ button, input, select, textarea { font: inherit; color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
+  
+}
+
+/* ================= PÁGINAS WEB: FILAS POR PLAN ================= */
+.plan-row + .plan-row { margin-top: 56px; }
+.plan-row-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.plan-row-title { font: 500 12px var(--font-mono); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.plan-row-hint { font-size: 12px; color: var(--muted); }
+
+/* Compu: entran 3; si hay más, se desliza a la derecha */
+.projects-scroll {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - 56px) / 3);
+  gap: 28px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 14px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-strong) transparent;
+}
+.projects-scroll::-webkit-scrollbar { height: 6px; }
+.projects-scroll::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 6px; }
+.projects-scroll > .project { scroll-snap-align: start; min-width: 0; }
+
+/* El aviso "Deslizá →" solo aparece si hay más de 3 */
+.plan-row-hint { display: none; }
+.plan-row:has(.projects-scroll > :nth-child(4)) .plan-row-hint { display: inline; }
+
+/* Celular y tablet: se ve 1 tarjeta y asoma la siguiente */
+@media (max-width: 900px) {
+  .projects-scroll {
+    grid-auto-columns: 85%;
+    gap: 16px;
+    margin-inline: -32px;
+    padding-inline: 32px;
+    scroll-padding-inline: 32px;
+  }
+  .plan-row:has(.projects-scroll > :nth-child(2)) .plan-row-hint { display: inline; }
+}
+@media (max-width: 600px) {
+  .projects-scroll {
+    margin-inline: -20px;
+    padding-inline: 20px;
+    scroll-padding-inline: 20px;
+  }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+  .projects-scroll { grid-auto-columns: 60%; }
 }
