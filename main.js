@@ -84,7 +84,7 @@
     var cards = Array.prototype.slice.call(document.querySelectorAll("#web .project"));
     var rows = Array.prototype.slice.call(document.querySelectorAll("#web .plan-row"));
 
-    function applyRubro(rubro) {
+    var applyRubro = function (rubro) {
       rubroBtns.forEach(function (b) {
         var on = b.getAttribute("data-rubro") === rubro;
         b.classList.toggle("is-active", on);
@@ -102,11 +102,10 @@
         if (scroller) scroller.scrollLeft = 0;
       });
       updateActive();
-    }
+    };
 
-    rubroBar.addEventListener("click", function (e) {
-      var b = e.target.closest("button");
-      if (b) applyRubro(b.getAttribute("data-rubro"));
+    rubroBtns.forEach(function (b) {
+      b.addEventListener("click", function () { applyRubro(b.getAttribute("data-rubro")); });
     });
 
     var rubroInicial = null;

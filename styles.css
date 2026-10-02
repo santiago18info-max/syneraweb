@@ -402,7 +402,6 @@ button, input, select, textarea { font: inherit; color: inherit; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
   .js .reveal { opacity: 1; transform: none; }
-  
 }
 
 /* ================= PÁGINAS WEB: FILAS POR PLAN ================= */
@@ -454,16 +453,31 @@ button, input, select, textarea { font: inherit; color: inherit; }
 @media (min-width: 601px) and (max-width: 900px) {
   .projects-scroll { grid-auto-columns: 60%; }
 }
-/* ===== Filtro por rubro ===== */
-#web [hidden]{display:none!important}
-.rubro-filter{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px}
-.rubro-filter button{font:inherit;font-size:.9rem;font-weight:600;padding:9px 18px;border-radius:999px;border:1px solid rgba(0,0,0,.14);background:transparent;color:inherit;cursor:pointer;transition:background .2s,color .2s,border-color .2s}
-.rubro-filter button:hover{border-color:currentColor}
-.rubro-filter button.is-active{background:#1f2a24;border-color:#1f2a24;color:#fff}
-.rubro-filter button.is-featured{border-color:#1f2a24}
-.rubro-filter button span{font-size:.68rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:2px 8px;border-radius:999px;background:#e8604c;color:#fff;margin-left:6px}
-@media (max-width:640px){
-  .rubro-filter{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin-bottom:20px}
-  .rubro-filter::-webkit-scrollbar{display:none}
-  .rubro-filter button{flex:none}
+
+/* ================= FILTRO POR RUBRO ================= */
+/* Usa los colores del tema, así se ve bien en modo claro y oscuro */
+#web [hidden] { display: none !important; }
+.rubro-filter { position: relative; z-index: 2; display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; }
+.rubro-filter button {
+  font: 600 14px/1 var(--font-body);
+  min-height: 40px; padding: 0 18px; border-radius: 999px;
+  border: 1px solid var(--line-strong); background: transparent; color: var(--text);
+  cursor: pointer; white-space: nowrap;
+  touch-action: manipulation; -webkit-tap-highlight-color: transparent;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.rubro-filter button.is-featured { border-color: var(--text); }
+.rubro-filter button.is-active { background: var(--text); border-color: var(--text); color: var(--bg); }
+.rubro-filter button span {
+  font: 500 10px var(--font-mono); letter-spacing: .06em; text-transform: uppercase;
+  padding: 3px 8px; border-radius: 999px; margin-left: 6px;
+  background: var(--blue); color: var(--bg); pointer-events: none;
+}
+@media (hover: hover) {
+  .rubro-filter button:hover { border-color: var(--text); }
+}
+@media (max-width: 640px) {
+  .rubro-filter { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -20px 20px; padding-inline: 20px; }
+  .rubro-filter::-webkit-scrollbar { display: none; }
+  .rubro-filter button { flex: none; }
 }
