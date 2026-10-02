@@ -77,7 +77,8 @@
   }
 
   // ---------- Filtro de demos por rubro ----------
-  // Se puede abrir ya filtrado con ?rubro=iphone#web
+  // Se puede abrir ya filtrado con ?rubro=iphone#web o ?rubro=cafeteria#web
+  // Una card puede tener varios rubros separados por espacio: data-rubro="gastronomia cafeteria"
   var rubroBar = document.getElementById("rubroFilter");
   if (rubroBar) {
     var rubroBtns = Array.prototype.slice.call(rubroBar.querySelectorAll("button"));
@@ -91,7 +92,8 @@
         b.setAttribute("aria-pressed", String(on));
       });
       cards.forEach(function (c) {
-        c.hidden = rubro !== "todos" && c.getAttribute("data-rubro") !== rubro;
+        var rubros = (c.getAttribute("data-rubro") || "").split(/\s+/);
+        c.hidden = rubro !== "todos" && rubros.indexOf(rubro) === -1;
       });
       rows.forEach(function (row) {
         var visibles = row.querySelectorAll(".project:not([hidden])").length;
