@@ -76,6 +76,44 @@
     items.forEach(function (el) { el.classList.add("is-visible"); });
   }
 
+  // ---------- Filtro de demos por rubro ----------
+  // Se puede abrir ya filtrado con ?rubro=iphone#web
+  var rubroBar = document.getElementById("rubroFilter");
+  if (rubroBar) {
+    var rubroBtns = Array.prototype.slice.call(rubroBar.querySelectorAll("button"));
+    var cards = Array.prototype.slice.call(document.querySelectorAll("#web .project"));
+    var rows = Array.prototype.slice.call(document.querySelectorAll("#web .plan-row"));
+
+    function applyRubro(rubro) {
+      rubroBtns.forEach(function (b) {
+        var on = b.getAttribute("data-rubro") === rubro;
+        b.classList.toggle("is-active", on);
+        b.setAttribute("aria-pressed", String(on));
+      });
+      cards.forEach(function (c) {
+        c.hidden = rubro !== "todos" && c.getAttribute("data-rubro") !== rubro;
+      });
+      rows.forEach(function (row) {
+        var visibles = row.querySelectorAll(".project:not([hidden])").length;
+        row.hidden = visibles === 0;
+        var hint = row.querySelector(".plan-row-hint");
+        if (hint) hint.hidden = visibles <= 3;
+        var scroller = row.querySelector(".projects-scroll");
+        if (scroller) scroller.scrollLeft = 0;
+      });
+      updateActive();
+    }
+
+    rubroBar.addEventListener("click", function (e) {
+      var b = e.target.closest("button");
+      if (b) applyRubro(b.getAttribute("data-rubro"));
+    });
+
+    var rubroInicial = null;
+    try { rubroInicial = new URLSearchParams(window.location.search).get("rubro"); } catch (e) {}
+    if (rubroInicial && rubroBar.querySelector('[data-rubro="' + rubroInicial + '"]')) applyRubro(rubroInicial);
+  }
+
   // ---------- Formulario: arma el mensaje y lo manda por WhatsApp o email ----------
   var form = document.getElementById("contactForm");
   var note = document.getElementById("formNote");
