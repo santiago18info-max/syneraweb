@@ -169,6 +169,15 @@
             <p class="cat-desc">Demos de distintos rubros para cada plan. Son genéricas: se adaptan y se mejoran para cada comercio, con sus fotos, sus productos y su estilo. Miga muestra cómo crece una misma panadería del plan Inicial al Profesional.</p>
           </div>
 
+          <!-- Filtro por rubro -->
+          <div class="rubro-filter reveal" id="rubroFilter" role="group" aria-label="Filtrar demos por rubro">
+            <button type="button" data-rubro="todos" class="is-active">Todos</button>
+            <button type="button" data-rubro="iphone" class="is-featured">iPhone y tecnología <span>Nuevo</span></button>
+            <button type="button" data-rubro="gastronomia">Gastronomía</button>
+            <button type="button" data-rubro="tiendas">Tiendas</button>
+            <button type="button" data-rubro="servicios">Servicios</button>
+          </div>
+
           <!-- ===== PLAN INICIAL ===== -->
           <div class="plan-row reveal">
             <div class="plan-row-head">
@@ -177,7 +186,7 @@
             </div>
             <div class="projects-scroll">
 
-              <article class="project">
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/parrilla.png" alt="Captura de la demo Fuego Lento" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Fuego Lento</span>
@@ -190,7 +199,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/panaderia.png" alt="Captura de la demo Miga, plan Inicial" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Miga</span>
@@ -203,7 +212,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="servicios">
                 <figure class="project-media">
                   <img src="img/proyectos/odontologo.png" alt="Captura de la demo Lumen Odontología" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Lumen</span>
@@ -216,7 +225,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="servicios">
                 <figure class="project-media">
                   <img src="img/proyectos/raices.png" alt="Captura de la demo Alba Propiedades" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Alba</span>
@@ -226,6 +235,32 @@
                   <h4>Alba · Inmobiliaria</h4>
                   <p>Buscador de propiedades con filtros, fichas con galería de fotos, barrios, pedido de tasación y consultas o visitas directas por WhatsApp.</p>
                   <a class="project-link" href="https://bienes-raices-demo.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project" data-rubro="iphone">
+                <figure class="project-media">
+                  <img src="img/proyectos/orbe.png" alt="Captura de la demo Orbe Store" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                  <span class="project-ph" aria-hidden="true">Orbe</span>
+                </figure>
+                <div class="project-body">
+                  <p class="project-meta">Plan Inicial · Demo</p>
+                  <h4>Orbe · Venta de iPhone</h4>
+                  <p>Equipos en stock con capacidad, batería y precio, accesorios, plan canje, garantía, preguntas frecuentes y consulta por WhatsApp desde cada equipo.</p>
+                  <a class="project-link" href="https://orbe-synera.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project" data-rubro="iphone">
+                <figure class="project-media">
+                  <img src="img/proyectos/nubo.png" alt="Captura de la demo Nubo Import" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                  <span class="project-ph" aria-hidden="true">Nubo</span>
+                </figure>
+                <div class="project-body">
+                  <p class="project-meta">Plan Inicial · Demo</p>
+                  <h4>Nubo · Importados por encargo</h4>
+                  <p>Estilo oscuro. Modelos en carrusel, lista de precios con buscador, equipo destacado de la semana e importación por encargo paso a paso.</p>
+                  <a class="project-link" href="https://nubo-synera.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
 
@@ -240,7 +275,7 @@
             </div>
             <div class="projects-scroll">
 
-              <article class="project">
+              <article class="project" data-rubro="tiendas">
                 <figure class="project-media">
                   <img src="img/proyectos/ropa.png" alt="Captura de la demo NUDO" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">NUDO</span>
@@ -253,7 +288,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/panaderia.png" alt="Captura de la demo Miga, plan Profesional" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Miga Pro</span>
@@ -266,7 +301,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="tiendas">
                 <figure class="project-media">
                   <img src="img/proyectos/muebles.png" alt="Captura de la demo LOMA" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">LOMA</span>
@@ -276,6 +311,19 @@
                   <h4>LOMA · Muebles</h4>
                   <p>Catálogo con promos, buscador, precios por medida y terminación, muebles en stock o a pedido, cotización a medida y versión en inglés.</p>
                   <a class="project-link" href="https://muebles-demo.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                </div>
+              </article>
+
+              <article class="project" data-rubro="iphone">
+                <figure class="project-media">
+                  <img src="img/proyectos/bruma.png" alt="Captura de la demo Bruma" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                  <span class="project-ph" aria-hidden="true">Bruma</span>
+                </figure>
+                <div class="project-body">
+                  <p class="project-meta">Plan Profesional · Demo</p>
+                  <h4>Bruma · iPhone, audio y relojes</h4>
+                  <p>Tienda con filtros y buscador, ficha con color, capacidad y cálculo de cuotas, lista de pedido por WhatsApp, cotizador de canje y versión en inglés.</p>
+                  <a class="project-link" href="https://bruma-synera.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
                 </div>
               </article>
 
@@ -290,7 +338,7 @@
             </div>
             <div class="projects-scroll">
 
-              <article class="project">
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/Almibar.png" alt="Captura de la demo Almíbar" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Almíbar</span>
@@ -307,7 +355,7 @@
                 </div>
               </article>
 
-              <article class="project">
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/restaurante.png" alt="Captura de la demo Ámbar" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Ámbar</span>
@@ -323,7 +371,8 @@
                   <p class="project-hint">Panel: usuario y clave <code>demo</code></p>
                 </div>
               </article>
-                            <article class="project">
+
+              <article class="project" data-rubro="gastronomia">
                 <figure class="project-media">
                   <img src="img/proyectos/cafe.png" alt="Captura de la demo Tostado" onerror="this.parentNode.classList.add('is-empty');this.remove()">
                   <span class="project-ph" aria-hidden="true">Tostado</span>
@@ -335,6 +384,23 @@
                   <div class="project-links">
                     <a class="project-link" href="https://demo-synera-cafe.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
                     <a class="project-link" href="https://demo-synera-cafe.vercel.app/panel.html" target="_blank" rel="noopener">Ver panel <span aria-hidden="true">↗</span></a>
+                  </div>
+                  <p class="project-hint">Panel: usuario y clave <code>demo</code></p>
+                </div>
+              </article>
+
+              <article class="project" data-rubro="iphone">
+                <figure class="project-media">
+                  <img src="img/proyectos/menta.png" alt="Captura de la demo Menta" onerror="this.parentNode.classList.add('is-empty');this.remove()">
+                  <span class="project-ph" aria-hidden="true">Menta</span>
+                </figure>
+                <div class="project-body">
+                  <p class="project-meta">Plan Completo · Demo</p>
+                  <h4>Menta · Tienda online de iPhone</h4>
+                  <p>Tienda con carrito, stock real, cupones, compra en tres pasos y seguimiento del pedido. Panel con ventas, pedidos, productos, cupones y banner.</p>
+                  <div class="project-links">
+                    <a class="project-link" href="https://menta-synera.vercel.app/" target="_blank" rel="noopener">Ver demo <span aria-hidden="true">↗</span></a>
+                    <a class="project-link" href="https://menta-synera.vercel.app/panel.html" target="_blank" rel="noopener">Ver panel <span aria-hidden="true">↗</span></a>
                   </div>
                   <p class="project-hint">Panel: usuario y clave <code>demo</code></p>
                 </div>
